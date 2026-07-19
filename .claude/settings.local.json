@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(cp \"/c/Users/MauraMartínez/Downloads/Método.svg\" \"/c/Users/MauraMartínez/Documents/Panamá Pacífico- Cesine/public/netbees-logo.svg\" && ls -la \"/c/Users/MauraMartínez/Documents/Panamá Pacífico- Cesine/public/\")",
+      "Bash(python3 -c ' *)",
+      "Bash(ffprobe -v error -show_entries stream=width,height,codec_name,duration,bit_rate -of default=noprint_wrappers=1 \"14370534_3840_2160_24fps.mp4\")",
+      "Bash(ffmpeg -version)",
+      "Bash(mkdir -p public/video)",
+      "Bash(ffmpeg -y -i /c/Users/MauraMartínez/Downloads/14370534_3840_2160_24fps.mp4 -vf scale=1920:-2 -an -c:v libx264 -preset slow -crf 26 -pix_fmt yuv420p -movflags +faststart public/video/hero-bg.mp4)",
+      "Bash(cygpath -w /tmp/frame_1.jpg)",
+      "Read(//c//**)",
+      "Bash(npx tsc *)",
+      "Bash(cd \"/c/Users/MauraMartínez/Documents/Panamá Pacífico- Cesine\" && ls -la public/video/video_*.mp4 2>&1 && rm -v public/video/video_cesine.mp4 public/video/video_netbees.mp4 public/video/video_panma.mp4 && echo \"---remaining video files---\" && ls -la public/video/)"
+    ]
+  }
+}

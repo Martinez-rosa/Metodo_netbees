@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ————————————————————————————————————————————————
+   Variables CSS puente (para usos fuera de Tailwind: canvas, grano)
+   ———————————————————————————————————————————————— */
+:root {
+  --brand-paper: #fbfbfd;
+  --brand-ink: #0b0b10;
+  --brand-line: #e4e2ef;
+  --brand-electric: #fad200;
+  --brand-indigo: #f59e0b;
+  --brand-accent: #ffbd00;
+  --brand-teal: #00c0a8;
+  --brand-deep: #181848;
+  --brand-void: #000000;
+}
+
+/* ————————————————————————————————————————————————
+   Base
+   ———————————————————————————————————————————————— */
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: auto; /* Lenis gestiona el smooth scroll */
+  }
+
+  body {
+    @apply bg-brand-paper text-brand-ink font-sans font-light;
+    /* Sin scroll horizontal en ningún caso. */
+    overflow-x: hidden;
+  }
+
+  /* Foco visible accesible en todo elemento interactivo.
+     Usa --brand-accent (ámbar oscuro, ~5:1 sobre paper) en vez del amarillo
+     vivo: --brand-electric no supera 1.5:1 de contraste y el foco quedaba
+     invisible para navegación por teclado. */
+  :where(a, button, input, textarea, [tabindex]):focus-visible {
+    outline: 2px solid var(--brand-accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: var(--brand-electric);
+    color: var(--brand-ink);
+  }
+
+  h1, h2, h3 {
+    @apply font-display font-bold tracking-tight;
+    text-wrap: balance;
+  }
+}
+
+/* Acento editorial: palabra en Instrument Serif itálica dentro de un titular. */
+.accent {
+  @apply font-serif font-normal italic tracking-normal text-brand-accent;
+}
+
+/* ————————————————————————————————————————————————
+   Utilidades del sistema
+   ———————————————————————————————————————————————— */
+@layer components {
+  /* Contenedor central del sistema de layout. */
+  .shell {
+    @apply mx-auto w-full max-w-shell px-gutter;
+  }
+
+  /* Eyebrow / label técnico — monoespaciada, espaciada. */
+  .eyebrow {
+    @apply font-label uppercase font-medium tracking-label text-[12px];
+  }
+
+  /* Rejilla técnica de fondo (líneas verticales 1px). Sutil, ~0.5 opacidad. */
+  .tech-grid {
+    background-image: linear-gradient(
+      to right,
+      var(--brand-line) 1px,
+      transparent 1px
+    );
+    background-size: clamp(64px, 8vw, 120px) 100%;
+    opacity: 0.5;
+  }
+
+  /* Grano/ruido al ~4% para placeholders y fondos editoriales. */
+  .grain::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.04;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+/* ————————————————————————————————————————————————
+   Reduced motion: estado final sin animación.
+   El JS también lo respeta; esto es el cinturón de seguridad CSS.
+   ———————————————————————————————————————————————— */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
