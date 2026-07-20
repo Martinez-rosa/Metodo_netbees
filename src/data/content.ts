@@ -118,7 +118,15 @@ export const contexto = {
     parrafo:
       'Capacitamos a jóvenes, estudiantes y personas en búsqueda de empleo para facilitar su incorporación al mercado laboral. Además, trabajamos con pymes para impulsar una cultura de innovación, transferir conocimiento y mentorizar en la aplicación práctica de la inteligencia artificial.',
   },
- 
+  videoRegion: {
+    eyebrow: 'CANTABRIA · ECOSISTEMA EUROPEO',
+    titulo: 'Cantabria, un ecosistema industrial en *expansión*',
+    parrafo:
+      'La Pasiega, el Puerto de Santander y un sector de automoción consolidado sitúan a Cantabria como socio estratégico para nuevos proyectos industriales y tecnológicos en Europa.',
+    creditos: 'Vídeo: SODERCAN — Sociedad para el Desarrollo de Cantabria',
+    embedUrl: 'https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7480302322233950208',
+  },
+
   metodoRapido: {
     eyebrow: 'ESCUELA DE IA',
     titulo: 'Método Netbees… ¿y *cómo*?',

@@ -43,6 +43,40 @@ export function Contexto() {
         </Reveal>
       </div>
 
+      {/* Vídeo de región: Cantabria como ecosistema industrial europeo */}
+      <div className="mt-14 border-t border-brand-line pt-14">
+        <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-16">
+          <div>
+            <p className="eyebrow text-brand-accent">{contexto.videoRegion.eyebrow}</p>
+            <SplitText
+              as="h3"
+              text={contexto.videoRegion.titulo}
+              className="mt-3 text-display-md font-bold"
+            />
+            <Reveal delay={0.1} className="mt-4">
+              <p className="text-body-lg text-brand-slate">{contexto.videoRegion.parrafo}</p>
+            </Reveal>
+          </div>
+
+          <Reveal delay={0.15}>
+            <div className="overflow-hidden rounded-card-lg border border-brand-line shadow-card">
+              <div className="relative aspect-video w-full">
+                <iframe
+                  src={contexto.videoRegion.embedUrl}
+                  title={contexto.videoRegion.titulo.replace(/\*/g, '')}
+                  loading="lazy"
+                  allowFullScreen
+                  className="absolute inset-0 h-full w-full"
+                />
+              </div>
+            </div>
+            <p className="mt-2 font-label text-[11px] uppercase tracking-label text-brand-slate">
+              {contexto.videoRegion.creditos}
+            </p>
+          </Reveal>
+        </div>
+      </div>
+
       {/* Alianzas: fila de logos de los tres socios */}
       <div className="mt-16 border-t border-brand-line pt-10">
         <RevealGroup
