@@ -46,6 +46,25 @@ export function Pilares() {
                 </div>
                 <h3 className="mt-6 font-display text-3xl font-bold tracking-tight">{p.nombre}</h3>
                 <p className="mt-3 text-body-lg text-brand-slate">{p.descripcion}</p>
+
+                {/* Burbujas de instituciones (p. ej. universidades/centros académicos) */}
+                {p.socios && (
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {p.socios.map((s) => (
+                      <div
+                        key={s.nombre}
+                        className="rounded-card border border-brand-line bg-brand-white px-3.5 py-2"
+                      >
+                        <span className="block font-label text-[11px] font-bold uppercase tracking-label text-brand-ink">
+                          {s.nombre}
+                        </span>
+                        <span className="block text-xs leading-snug text-brand-slate">
+                          {s.descripcion}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             </Card>
           </Reveal>

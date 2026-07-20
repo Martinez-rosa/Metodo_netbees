@@ -16,11 +16,18 @@ export interface NavItem {
   href: string
 }
 
+export interface SocioAcademico {
+  nombre: string
+  descripcion: string
+}
+
 export interface Pilar {
   index: string
   nombre: string
   rol: string
   descripcion: string
+  /** Burbujas de instituciones dentro del pilar (p. ej. universidades/centros). */
+  socios?: SocioAcademico[]
   video: { src: string; poster: string; alt: string }
 }
 
@@ -166,9 +173,13 @@ export const pilares = {
     },
     {
       index: '02',
-      nombre: 'Cesine',
+      nombre: 'Universidades / Centros académicos',
       rol: 'Socio académico',
-      descripcion: 'Motor de talento de élite y validación académica - Europass.',
+      descripcion: 'Motor de talento de élite y validación académica.',
+      socios: [
+        { nombre: 'UTP', descripcion: 'Universidad Tecnológica de Panamá' },
+        { nombre: 'Cesine', descripcion: 'Escuela de negocio, comunicación y diseño' },
+      ] satisfies SocioAcademico[],
       video: {
         src: '/video/pilar-cesine.mp4',
         poster: '/video/pilar-cesine-poster.jpg',
