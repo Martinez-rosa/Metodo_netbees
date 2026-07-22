@@ -212,7 +212,7 @@ export const pilares = {
 
 export const colaboradores = {
   eyebrow: 'EMPRESAS COLABORADORAS',
-  bajada: 'Compañías que ya forman parte del ecosistema Netbees a ambos lados del Atlántico.',
+  bajada: 'Empresas que ya forman parte del ecosistema Netbees.',
   items: [
     { nombre: 'Maflow', logo: '/logo_maflow-crop.png' },
     { nombre: 'Netbees', logo: '/logo_netbees-crop.png' },
