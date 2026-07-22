@@ -12,7 +12,14 @@
       "Bash(cygpath -w /tmp/frame_1.jpg)",
       "Read(//c//**)",
       "Bash(npx tsc *)",
-      "Bash(cd \"/c/Users/MauraMartínez/Documents/Panamá Pacífico- Cesine\" && ls -la public/video/video_*.mp4 2>&1 && rm -v public/video/video_cesine.mp4 public/video/video_netbees.mp4 public/video/video_panma.mp4 && echo \"---remaining video files---\" && ls -la public/video/)"
+      "Bash(cd \"/c/Users/MauraMartínez/Documents/Panamá Pacífico- Cesine\" && ls -la public/video/video_*.mp4 2>&1 && rm -v public/video/video_cesine.mp4 public/video/video_netbees.mp4 public/video/video_panma.mp4 && echo \"---remaining video files---\" && ls -la public/video/)",
+      "Bash(node -e ' *)",
+      "Bash(powershell -Command \"Get-Process -Id 15716 -ErrorAction SilentlyContinue | Select-Object Id,ProcessName,Path\")",
+      "Bash(node \"C:\\\\Users\\\\MAURAM~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-MauraMart-nez-Documents-Panam--Pac-fico--Cesine\\\\0e8a9496-50f1-42a5-aff5-b03e9de554f3\\\\scratchpad\\\\decode.js\")",
+      "Bash(node \"C:\\\\Users\\\\MAURAM~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-MauraMart-nez-Documents-Panam--Pac-fico--Cesine\\\\0e8a9496-50f1-42a5-aff5-b03e9de554f3\\\\scratchpad\\\\decode.js\" mcp-Claude_Browser-javascript_tool-1784710782502.txt final-row-preview.png)",
+      "Bash(powershell -Command \"Get-NetTCPConnection -LocalPort 5173 -ErrorAction SilentlyContinue | Select-Object OwningProcess\")",
+      "PowerShell(Stop-Process -Id 15716 -Force -Confirm:$false)",
+      "PowerShell(Get-NetTCPConnection -LocalPort 5173 -ErrorAction SilentlyContinue)"
     ]
   }
 }

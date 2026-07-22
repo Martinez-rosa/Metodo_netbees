@@ -28,8 +28,15 @@ export function PilarVideo({ src, poster, alt, className }: PilarVideoProps) {
 
   useEffect(() => {
     const video = videoRef.current
-    if (!video || reduced) return
+    const wrap = wrapRef.current
+    if (!video || !wrap || reduced) return
 
+    // Importante: observamos el contenedor ESTÁTICO (wrap), no el <video>.
+    // El vídeo vive dentro de un motion.div con parallax interno (`y: yPct`),
+    // así que su propio bounding box se mueve unos sub-píxeles en cada frame.
+    // Si se observa el <video> directamente, esa vibración hace que la
+    // intersección oscile justo en el umbral y dispara play()/pause() en
+    // bucle rápido — el vídeo "se corta" en vez de repetirse con fluidez.
     const io = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) video.play().catch(() => {})
@@ -37,7 +44,7 @@ export function PilarVideo({ src, poster, alt, className }: PilarVideoProps) {
       },
       { threshold: 0.15 },
     )
-    io.observe(video)
+    io.observe(wrap)
     return () => io.disconnect()
   }, [reduced])
 

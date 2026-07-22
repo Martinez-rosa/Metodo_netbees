@@ -4,6 +4,7 @@ import { Navbar } from './sections/Navbar'
 import { Hero } from './sections/Hero'
 import { Contexto } from './sections/Contexto'
 import { Pilares } from './sections/Pilares'
+import { Colaboradores } from './sections/Colaboradores'
 import { MinimalDivider } from './sections/MinimalDivider'
 import { Metodo } from './sections/Metodo'
 import { ModulosPrograma } from './sections/ModulosPrograma'
@@ -29,6 +30,7 @@ export default function App() {
         <Hero />
         <Contexto />
         <Pilares />
+        <Colaboradores />
         <MinimalDivider
           id="como"
           eyebrow={dividerUno.eyebrow}

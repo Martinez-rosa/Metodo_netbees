@@ -31,6 +31,11 @@ export interface Pilar {
   video: { src: string; poster: string; alt: string }
 }
 
+export interface Colaborador {
+  nombre: string
+  logo: string
+}
+
 export interface Metric {
   cifra: string
   unidad: string
@@ -199,6 +204,22 @@ export const pilares = {
       },
     },
   ] satisfies Pilar[],
+}
+
+// ————————————————————————————————————————————————
+// S2.1 · Empresas colaboradoras
+// ————————————————————————————————————————————————
+
+export const colaboradores = {
+  eyebrow: 'EMPRESAS COLABORADORAS',
+  bajada: 'Compañías que ya forman parte del ecosistema Netbees a ambos lados del Atlántico.',
+  items: [
+    { nombre: 'Maflow', logo: '/logo_maflow-crop.png' },
+    { nombre: 'Netbees', logo: '/logo_netbees-crop.png' },
+    { nombre: 'TIM', logo: '/logo_tim-crop.png' },
+    { nombre: 'Deduce', logo: '/logo_deduce.png' },
+    { nombre: 'Voltaris', logo: '/log-voltaris.png' },
+  ] satisfies Colaborador[],
 }
 
 // ————————————————————————————————————————————————
