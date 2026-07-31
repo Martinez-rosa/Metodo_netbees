@@ -3,6 +3,7 @@ import { MouseGlow } from './components/MouseGlow'
 import { Navbar } from './sections/Navbar'
 import { Hero } from './sections/Hero'
 import { Contexto } from './sections/Contexto'
+import { InnovacionAbierta } from './sections/InnovacionAbierta'
 import { Pilares } from './sections/Pilares'
 import { Colaboradores } from './sections/Colaboradores'
 import { MinimalDivider } from './sections/MinimalDivider'
@@ -29,6 +30,7 @@ export default function App() {
       <main>
         <Hero />
         <Contexto />
+        <InnovacionAbierta />
         <Pilares />
         <Colaboradores />
         <MinimalDivider
