@@ -126,7 +126,7 @@ export const hero = {
 
 export const contexto = {
   eyebrow: 'LA VENTAJA OPERATIVA',
-  titulo: 'La Innovación no se enseña se Provoca*',
+  titulo: 'La Innovación no se enseña se *Provoca*',
   parrafos: [
     'Disponemos de un entorno de experimentación y validación donde las organizaciones pueden testear soluciones, procesos y casos de uso antes de su implementación, reduciendo riesgos y acelerando la adopción de la inteligencia artificial.',
     'Formamos a empresas, instituciones, y profesionales mediante metodologías prácticas basadas en la resolución de retos reales.',
@@ -493,7 +493,7 @@ export const recursos = {
         'Formación 100% online (3 meses) o híbrida, apadrinada por empresa.',
     },
     {
-      titulo: 'Entrega de 10 becas del Programa Método Netbees',
+      titulo: 'Entrega de 5 becas del Programa Método Netbees',
       descripcion:
         'Para creación, prueba y validación de soluciones aplicadas a retos empresariales reales implementados por empresas de Panamá Pacífico.',
     },
