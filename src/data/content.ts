@@ -483,7 +483,7 @@ export const recursos = {
   cifra: '1.711,66',
   unidad: '$',
   cifraLabel: 'POR BECA',
-  cifraSub: '10 BECAS',
+  cifraSub: '5 BECAS',
   bloqueEconomicoTitulo: 'Inversión por beca',
   entregablesTitulo: 'Qué se entrega',
   entregables: [
