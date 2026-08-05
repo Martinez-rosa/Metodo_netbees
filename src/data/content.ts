@@ -244,7 +244,7 @@ export const pilares = {
 
 export const colaboradores = {
   eyebrow: 'EMPRESAS COLABORADORAS',
-  bajada: 'Empresas que partician - Misión Panamá Pacífico.',
+  bajada: 'Empresas que participan - Misión Panamá Pacífico.',
   items: [
     { nombre: 'Maflow', logo: '/logo_maflow-crop.png' },
     { nombre: 'Netbees', logo: '/logo_netbees-crop.png' },
