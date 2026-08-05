@@ -167,7 +167,22 @@ export const contexto = {
 // Innovación abierta: vídeo Netbees, debajo del bloque «Escuela de IA»
 // ————————————————————————————————————————————————
 
-
+export const innovacionAbierta = {
+  eyebrow: 'ESCUELA DE IA · LABORATORIO NETBEES',
+  titulo: 'Innovación *abierta* entre estudiantes y empresas',
+  parrafo:
+    'El Laboratorio de IA de Netbees pone a estudiantes y empresas a trabajar codo a codo sobre retos reales: equipos mixtos, mentoría profesional y prototipos que se validan en el mismo entorno donde nacen los procesos que buscan mejorar.',
+  video: {
+    src: '/Laboratorio_ia.mp4',
+    poster: '/video/laboratorio-ia-poster.jpg',
+    alt: 'Laboratorio de IA Netbees — innovación abierta entre estudiantes y empresas',
+  },
+  creditos: 'Vídeo: Netbees — Laboratorio de IA',
+  badges: [
+    { icon: 'Users', texto: 'Estudiantes × Empresas' },
+    { icon: 'Target', texto: 'Retos reales' },
+  ] satisfies MetodoPunto[],
+}
 
 // ————————————————————————————————————————————————
 // S2 · Los tres pilares
