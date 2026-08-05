@@ -126,10 +126,12 @@ export const hero = {
 
 export const contexto = {
   eyebrow: 'LA VENTAJA OPERATIVA',
-  titulo: 'El talento, el desarrollo y el *futuro*',
+  titulo: 'La Innovación no se enseña se Provoca*',
   parrafos: [
-    'Formamos a empresas, centros educativos y profesionales mediante metodologías prácticas basadas en la resolución de retos reales. Nuestro objetivo es acercar la inteligencia artificial a situaciones cotidianas y necesidades concretas del mercado.',
     'Disponemos de un entorno de experimentación y validación donde las organizaciones pueden testear soluciones, procesos y casos de uso antes de su implementación, reduciendo riesgos y acelerando la adopción de la inteligencia artificial.',
+    'Formamos a empresas, instituciones, y profesionales mediante metodologías prácticas basadas en la resolución de retos reales.',
+    'Nuestro objetivo es acercar la inteligencia artificial a situaciones cotidianas y necesidades concretas del mercado.',
+
   ],
   secundario: {
     titulo: 'Impulsando el *talento*',
@@ -140,7 +142,7 @@ export const contexto = {
     eyebrow: 'CANTABRIA · ECOSISTEMA EUROPEO',
     titulo: 'Cantabria, un ecosistema industrial en *expansión*',
     parrafo:
-      'La Pasiega, el Puerto de Santander y un sector de automoción consolidado sitúan a Cantabria como socio estratégico para nuevos proyectos industriales y tecnológicos en Europa.',
+      'El Puerto de Santander y un sector de automoción consolidado sitúan a Cantabria como socio estratégico para nuevos proyectos industriales y tecnológicos en Europa.',
     creditos: 'Vídeo: SODERCAN — Sociedad para el Desarrollo de Cantabria',
     embedUrl: 'https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7480302322233950208',
   },
@@ -154,7 +156,7 @@ export const contexto = {
       { icon: 'Laptop', texto: '100% online o híbrido… tú decides' },
       { icon: 'Target', texto: 'Enfocado a tus procesos' },
       { icon: 'FlaskConical', texto: 'Laboratorio de IA vivo' },
-      { icon: 'BadgeCheck', texto: 'Certificado de finalización' },
+      { icon: 'BadgeCheck', texto: 'Certificado de finalización emitido Fundación gestora de la Escuela Universitaria  Altamira y la Altamira IA Academy adscrita a la UC' },
     ] satisfies MetodoPunto[],
   },
 }
@@ -165,22 +167,7 @@ export const contexto = {
 // Innovación abierta: vídeo Netbees, debajo del bloque «Escuela de IA»
 // ————————————————————————————————————————————————
 
-export const innovacionAbierta = {
-  eyebrow: 'ESCUELA DE IA · LABORATORIO NETBEES',
-  titulo: 'Innovación *abierta* entre estudiantes y empresas',
-  parrafo:
-    'El Laboratorio de IA de Netbees pone a estudiantes y empresas a trabajar codo a codo sobre retos reales: equipos mixtos, mentoría profesional y prototipos que se validan en el mismo entorno donde nacen los procesos que buscan mejorar.',
-  video: {
-    src: '/Laboratorio_ia.mp4',
-    poster: '/video/laboratorio-ia-poster.jpg',
-    alt: 'Laboratorio de IA Netbees — innovación abierta entre estudiantes y empresas',
-  },
-  creditos: 'Vídeo: Netbees — Laboratorio de IA',
-  badges: [
-    { icon: 'Users', texto: 'Estudiantes × Empresas' },
-    { icon: 'Target', texto: 'Retos reales' },
-  ] satisfies MetodoPunto[],
-}
+
 
 // ————————————————————————————————————————————————
 // S2 · Los tres pilares
@@ -210,7 +197,7 @@ export const pilares = {
       descripcion: 'Motor de talento de élite y validación académica.',
       socios: [
         { nombre: 'UTP', descripcion: 'Universidad Tecnológica de Panamá' },
-        { nombre: 'Altamira', descripcion: 'Escuela Universitaria de Turismo' },
+        { nombre: 'Altamira', descripcion: 'Fundación gestora de la Escuela Universitaria  Altamira y la Altamira IA Academy adscrita a la uce' },
       ] satisfies SocioAcademico[],
       logo: '/logo_altamira.svg',
       logoTone: 'red',
@@ -225,7 +212,7 @@ export const pilares = {
       nombre: 'Netbees',
       rol: 'Socio tecnológico europeo',
       descripcion:
-        'Laboratorio de IA en Europa y red de empresas innovadoras europeas.',
+        'Laboratorio de IA en España y red de empresas innovadoras europeas.',
       logo: '/logo_netbees.svg',
       video: {
         src: '/video/pilar-netbees.mp4',

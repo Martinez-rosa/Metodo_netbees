@@ -7,8 +7,9 @@ import { AnimatedBackground } from '../components/AnimatedBackground'
 
 /**
  * Vídeo destacado de Netbees: el método de innovación abierta entre
- * estudiantes y empresas. Vive justo debajo del bloque «Escuela de IA» de
- * Contexto. Fondo claro con gradiente suave (Aurora) y tratamiento de vídeo
+ * estudiantes y empresas. Vive justo debajo de Contexto y antes del bloque
+ * «Escuela de IA» (MetodoRapido). Fondo claro con gradiente suave (Aurora) y
+ * tratamiento de vídeo
  * "hero" (halo + tarjeta con ring/sombra + píldoras flotantes), en línea con
  * la referencia visual de Digital Heroes que ya inspira los radios
  * redondeados del sistema — nunca fondo oscuro ni bloques sólidos.

@@ -1,16 +1,15 @@
 import { contexto } from '../data/content'
 import { SectionShell } from '../components/SectionShell'
 import { SplitText } from '../components/SplitText'
-import { AccentText } from '../components/AccentText'
-import { Reveal, RevealGroup } from '../components/Reveal'
-import { Icon } from '../components/Icon'
+import { Reveal } from '../components/Reveal'
 import { AnimatedBackground } from '../components/AnimatedBackground'
 
 /**
  * Contexto: qué es Netbees, entre el Hero y Los tres pilares. Cabecera
  * editorial (titular + párrafos a dos columnas, estilo "Trusted where trust
- * is audited"), un bloque secundario sobre talento, un bloque con el método
- * resumido en bullets + icono, y al pie los logos de Cesine y Netbees.
+ * is audited") y un bloque secundario sobre talento, cerrando con el vídeo
+ * de Cantabria. El bloque «Método Netbees… ¿y cómo?» vive aparte, en
+ * MetodoRapido.tsx (después de Innovación abierta).
  */
 export function Contexto() {
   return (
@@ -76,52 +75,6 @@ export function Contexto() {
           </Reveal>
         </div>
       </div>
-
-      {/* Método Netbees resumido: bullets con icono, sobre fondo claro. */}
-      <Reveal className="mt-lg">
-        <div className="rounded-card-lg border border-brand-line bg-brand-white px-7 py-10 shadow-card md:px-12 md:py-12">
-          <p className="eyebrow text-brand-accent">{contexto.metodoRapido.eyebrow}</p>
-          <h3 className="mt-3 font-display text-2xl font-bold tracking-tight text-brand-ink md:text-3xl">
-            <AccentText text={contexto.metodoRapido.titulo} tone="accent" />
-          </h3>
-
-          <RevealGroup className="mt-8 grid gap-x-8 gap-y-5 sm:grid-cols-2" stagger={0.06}>
-            {contexto.metodoRapido.puntos.map((pt) => (
-              <Reveal key={pt.texto} asChild>
-                <div className="flex items-center gap-3.5">
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-brand-line text-brand-accent">
-                    <Icon name={pt.icon} className="h-4 w-4" strokeWidth={1.75} />
-                  </span>
-                  <span className="font-sans text-[15px] font-medium text-brand-ink">
-                    {pt.texto}
-                  </span>
-                </div>
-              </Reveal>
-            ))}
-          </RevealGroup>
-        </div>
-      </Reveal>
-
-      {/* Logos de socios académicos/tecnológicos, discretos al pie de sección. */}
-      <RevealGroup
-        className="mt-lg flex flex-wrap items-center justify-center gap-x-12 gap-y-6"
-        stagger={0.08}
-      >
-        <Reveal asChild>
-          <img
-            src="/logo_cesine.jpg"
-            alt="Cesine"
-            className="h-8 w-auto grayscale transition-[filter] duration-300 hover:grayscale-0 md:h-9"
-          />
-        </Reveal>
-        <Reveal asChild>
-          <img
-            src="/logo_netbees.svg"
-            alt="Netbees"
-            className="h-9 w-auto grayscale transition-[filter] duration-300 hover:grayscale-0 md:h-10"
-          />
-        </Reveal>
-      </RevealGroup>
     </SectionShell>
   )
 }

@@ -4,6 +4,7 @@ import { Navbar } from './sections/Navbar'
 import { Hero } from './sections/Hero'
 import { Contexto } from './sections/Contexto'
 import { InnovacionAbierta } from './sections/InnovacionAbierta'
+import { MetodoRapido } from './sections/MetodoRapido'
 import { Pilares } from './sections/Pilares'
 import { Colaboradores } from './sections/Colaboradores'
 import { MinimalDivider } from './sections/MinimalDivider'
@@ -31,6 +32,7 @@ export default function App() {
         <Hero />
         <Contexto />
         <InnovacionAbierta />
+        <MetodoRapido />
         <Pilares />
         <Colaboradores />
         <MinimalDivider
