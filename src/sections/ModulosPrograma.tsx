@@ -24,7 +24,7 @@ export function ModulosPrograma() {
       </div>
 
       {/* Cita destacada: el temario es modular, no un paquete cerrado. */}
-      <Reveal delay={0.2} className="mx-auto mt-10 max-w-5xl">
+      <Reveal delay={0.2} className="mx-auto mt-md max-w-5xl">
         <blockquote className="rounded-card border-l-[3px] border-brand-accent bg-gradient-to-r from-brand-electric/[0.05] to-transparent p-6 md:p-8">
           <p className="font-display text-lg leading-snug tracking-tight text-brand-ink md:text-xl">
             {programa.cita.texto}
@@ -38,7 +38,7 @@ export function ModulosPrograma() {
       </Reveal>
 
       {/* Lista apilada, ancho contenido para líneas legibles. */}
-      <RevealGroup className="mx-auto mt-14 max-w-5xl space-y-4" stagger={0.06}>
+      <RevealGroup className="mx-auto mt-lg max-w-5xl space-y-4" stagger={0.06}>
         {programa.bloques.map((b) => (
           <Reveal key={b.num} asChild>
             <article className="group rounded-card-lg border border-brand-line bg-brand-white/70 p-6 transition-[border-color,box-shadow,transform] duration-300 ease-expo hover:-translate-y-0.5 hover:border-brand-accent/50 hover:shadow-card-hover md:p-8">

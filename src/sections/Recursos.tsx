@@ -25,7 +25,7 @@ export function Recursos() {
         <SplitText as="h2" text={recursos.titulo} className="text-display-lg font-bold" />
       </div>
 
-      <div className="mt-16 grid gap-12 lg:grid-cols-[0.9fr,1.1fr] lg:gap-20">
+      <div className="mt-lg grid gap-12 lg:grid-cols-[0.9fr,1.1fr] lg:gap-20">
         {/* Columna izquierda: bloque económico */}
         <Reveal direction="right">
           <div className="rounded-card border border-brand-line bg-brand-white p-8 shadow-card lg:sticky lg:top-28">

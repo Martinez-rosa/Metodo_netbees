@@ -51,7 +51,7 @@ export function TalentLab() {
 
       {/* Retos tecnológicos resueltos: introduce los módulos de abajo, cada
           uno con el logo del reto ya resuelto (en vez de una fila aparte). */}
-      <div className="mt-14 border-t border-brand-line pt-10">
+      <div className="mt-lg border-t border-brand-line pt-lg">
         <Reveal direction="none" blur={false}>
           <p className="eyebrow text-brand-accent">{talentLab.retosEyebrow}</p>
         </Reveal>
@@ -61,7 +61,7 @@ export function TalentLab() {
       </div>
 
       {/* Diagrama de nodos conectados */}
-      <div className="relative mt-16">
+      <div className="relative mt-lg">
         {/* Líneas SVG que se dibujan (solo desktop, donde la rejilla 2x2 aplica). */}
         <svg
           aria-hidden

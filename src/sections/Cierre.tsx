@@ -34,13 +34,13 @@ export function Cierre() {
         <AnimatedBackground variant="aurora" />
       </div>
 
-      <div className="shell grid gap-16 lg:grid-cols-[1.1fr,0.9fr] lg:gap-20">
+      <div className="shell grid items-center gap-16 lg:grid-cols-[1.3fr,0.7fr] lg:gap-14">
         {/* Copy + CTAs */}
         <div>
           <Reveal direction="none">
             <Eyebrow>{cierre.eyebrow}</Eyebrow>
           </Reveal>
-          <div className="mt-6 max-w-[14ch]">
+          <div className="mt-6 max-w-2xl">
             <SplitText as="h2" text={cierre.titulo} className="text-display-lg font-bold" />
           </div>
           <Reveal delay={0.2} className="mt-6 max-w-xl">
@@ -57,8 +57,12 @@ export function Cierre() {
           </Reveal>
         </div>
 
-        {/* Formulario */}
-        <Reveal direction="left" id="cierre-form">
+        {/* Formulario, con halo decorativo flotando tras la tarjeta. */}
+        <Reveal direction="left" id="cierre-form" className="relative">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -right-10 -top-12 -z-10 h-44 w-44 rounded-full bg-gradient-to-br from-brand-accent to-brand-teal opacity-30 blur-3xl"
+          />
           <div className="rounded-card border border-brand-line bg-brand-white/80 p-8 shadow-card backdrop-blur-sm">
             {sent ? (
               <div className="flex min-h-[280px] flex-col items-center justify-center text-center">

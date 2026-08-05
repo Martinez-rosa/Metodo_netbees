@@ -28,12 +28,18 @@ export interface Pilar {
   descripcion: string
   /** Burbujas de instituciones dentro del pilar (p. ej. universidades/centros). */
   socios?: SocioAcademico[]
+  /** Logo del socio, mostrado como sello discreto dentro de la tarjeta. */
+  logo?: string
+  /** Tono del sello: 'red' para marca Altamira, 'neutral' (por defecto) vidrio/blanco. */
+  logoTone?: 'red' | 'neutral'
   video: { src: string; poster: string; alt: string }
 }
 
 export interface Colaborador {
   nombre: string
   logo: string
+  /** Logos cuadrados/verticales leen más pequeños que los horizontales a igual altura: marca este flag para darles más aire en la cinta. */
+  destacado?: boolean
 }
 
 export interface Metric {
@@ -204,12 +210,14 @@ export const pilares = {
       descripcion: 'Motor de talento de élite y validación académica.',
       socios: [
         { nombre: 'UTP', descripcion: 'Universidad Tecnológica de Panamá' },
-        { nombre: 'Cesine', descripcion: 'Escuela de negocio, comunicación y diseño' },
+        { nombre: 'Altamira', descripcion: 'Escuela Universitaria de Turismo' },
       ] satisfies SocioAcademico[],
+      logo: '/logo_altamira.svg',
+      logoTone: 'red',
       video: {
-        src: '/video/pilar-cesine.mp4',
-        poster: '/video/pilar-cesine-poster.jpg',
-        alt: 'Aulas de Cesine',
+        src: '/video/video_escuelaAltamira.mp4',
+        poster: '',
+        alt: 'Escuela Universitaria de Turismo Altamira',
       },
     },
     {
@@ -218,6 +226,7 @@ export const pilares = {
       rol: 'Socio tecnológico europeo',
       descripcion:
         'Laboratorio de IA en Europa y red de empresas innovadoras europeas.',
+      logo: '/logo_netbees.svg',
       video: {
         src: '/video/pilar-netbees.mp4',
         poster: '/video/pilar-netbees-poster.jpg',
@@ -239,7 +248,10 @@ export const colaboradores = {
     { nombre: 'Netbees', logo: '/logo_netbees-crop.png' },
     { nombre: 'TIM', logo: '/logo_tim-crop.png' },
     { nombre: 'Deduce', logo: '/logo_deduce.png' },
-    { nombre: 'Voltaris', logo: '/log-voltaris.png' },
+    { nombre: 'Altamira', logo: '/logo_altamira.svg', destacado: true },
+    { nombre: 'Incentro', logo: '/logo_incentro.svg', destacado: true },
+    { nombre: 'Cámara de Comercio de Torrelavega', logo: '/logo_cámaradecomerciotorrellavega.svg', destacado: true },
+    { nombre: 'H7 Metrology', logo: '/logo_h7metrology.svg', destacado: true },
   ] satisfies Colaborador[],
 }
 
@@ -251,7 +263,7 @@ export const dividerUno = {
   eyebrow: 'ESTRATEGIA Y EJECUCIÓN',
   titulo: '¿Cómo lo vamos a *hacer*?',
   parrafo:
-    'Antes de escalar, validamos. El Método Netbees traduce la estrategia en un plan operativo — infraestructura, equipamiento, talento y mentoría — ya probado en Europa.',
+    'Antes de escalar, validamos. El Método Netbees traduce la estrategia en un plan operativo: infraestructura, equipamiento, talento y mentoría ya probado en Europa.',
 }
 
 // ————————————————————————————————————————————————
@@ -532,8 +544,8 @@ export const footer = {
   actores: ['Panamá Pacífico', 'CESINE', 'Netbees'],
   legales: [
     { label: 'Aviso legal', href: '#' },
-    { label: 'Privacidad', href: '#' },
-    { label: 'Cookies', href: '#' },
+    { label: 'Privacidad', href: '/privacidad' },
+    { label: 'Cookies', href: '/cookies' },
   ] satisfies NavItem[],
   copyright: '© 2026 Netbees. Todos los derechos reservados.',
   marquee: 'PANAMÁ PACÍFICO · CESINE · NETBEES · TALENT LAB · MÉTODO NETBEES ·',

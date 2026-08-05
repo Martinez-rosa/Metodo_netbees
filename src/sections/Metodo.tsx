@@ -35,7 +35,7 @@ export function Metodo() {
         </Reveal>
       </div>
 
-      <div ref={timelineRef} className="relative mt-16">
+      <div ref={timelineRef} className="relative mt-lg">
         {/* Línea base, tenue. */}
         <div aria-hidden className="absolute left-[10px] top-2 bottom-2 w-px bg-brand-line" />
         {/* Línea de progreso: se dibuja (scaleY) al hacer scroll por la lista. */}

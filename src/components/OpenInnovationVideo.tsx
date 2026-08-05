@@ -28,15 +28,38 @@ export function OpenInnovationVideo({ src, poster, alt, badges, className }: Ope
     const video = videoRef.current
     const wrap = wrapRef.current
     if (!video || !wrap || reduced) return
+    let intersecting = false
+
+    // Chrome pausa por su cuenta los vídeos mudos "en segundo plano" para
+    // ahorrar batería, aunque sigan en pantalla y tengan `loop`. Si eso pasa
+    // mientras seguimos intersectando, forzamos la reanudación — si no, el
+    // vídeo se queda congelado en su último frame en vez de repetirse.
+    const resume = () => {
+      if (intersecting && document.visibilityState === 'visible' && video.paused) {
+        video.play().catch(() => {})
+      }
+    }
+
     const io = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) video.play().catch(() => {})
+        intersecting = entry.isIntersecting
+        if (intersecting) resume()
         else video.pause()
       },
       { threshold: 0.2 },
     )
     io.observe(wrap)
-    return () => io.disconnect()
+
+    video.addEventListener('pause', resume)
+    video.addEventListener('ended', resume)
+    document.addEventListener('visibilitychange', resume)
+
+    return () => {
+      io.disconnect()
+      video.removeEventListener('pause', resume)
+      video.removeEventListener('ended', resume)
+      document.removeEventListener('visibilitychange', resume)
+    }
   }, [reduced])
 
   return (

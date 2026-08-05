@@ -15,6 +15,16 @@
   --brand-teal: #00c0a8;
   --brand-deep: #181848;
   --brand-void: #000000;
+
+  /* Escala de espaciado vertical — único origen de verdad para el ritmo
+     entre bloques y entre secciones. Nunca valores sueltos en componentes. */
+  --space-2xs: 0.75rem;   /* 12px */
+  --space-xs: 1.25rem;    /* 20px */
+  --space-sm: 2rem;       /* 32px */
+  --space-md: 3rem;       /* 48px */
+  --space-lg: 4rem;       /* 64px */
+  --space-xl: 5.5rem;     /* 88px */
+  --space-section: clamp(6rem, 12vw, 11rem);
 }
 
 /* ————————————————————————————————————————————————

@@ -9,8 +9,8 @@ import { AnimatedBackground } from '../components/AnimatedBackground'
 /**
  * Contexto: qué es Netbees, entre el Hero y Los tres pilares. Cabecera
  * editorial (titular + párrafos a dos columnas, estilo "Trusted where trust
- * is audited"), un bloque secundario sobre talento, la fila de logos de los
- * tres socios, y un bloque oscuro con el método resumido en bullets + icono.
+ * is audited"), un bloque secundario sobre talento, un bloque con el método
+ * resumido en bullets + icono, y al pie los logos de Cesine y Netbees.
  */
 export function Contexto() {
   return (
@@ -32,7 +32,7 @@ export function Contexto() {
       </div>
 
       {/* Secundario: Impulsando el talento */}
-      <div className="mt-14 grid gap-6 border-t border-brand-line pt-14 lg:grid-cols-2 lg:gap-16">
+      <div className="mt-lg grid gap-6 border-t border-brand-line pt-lg lg:grid-cols-2 lg:gap-16">
         <SplitText
           as="h3"
           text={contexto.secundario.titulo}
@@ -44,7 +44,7 @@ export function Contexto() {
       </div>
 
       {/* Vídeo de región: Cantabria como ecosistema industrial europeo */}
-      <div className="mt-14 border-t border-brand-line pt-14">
+      <div className="mt-lg border-t border-brand-line pt-lg">
         <div className="grid gap-8 lg:grid-cols-2 lg:items-center lg:gap-16">
           <div>
             <p className="eyebrow text-brand-accent">{contexto.videoRegion.eyebrow}</p>
@@ -77,36 +77,8 @@ export function Contexto() {
         </div>
       </div>
 
-      {/* Alianzas: fila de logos de los tres socios */}
-      <div className="mt-16 border-t border-brand-line pt-10">
-        <RevealGroup
-          className="mt-8 flex flex-wrap items-center justify-center gap-x-12 gap-y-6"
-          stagger={0.08}
-        >
-          <Reveal asChild>
-            <span className="font-display text-xl font-bold tracking-tight text-brand-ink/70 grayscale transition-[filter,color] duration-300 hover:text-brand-ink hover:grayscale-0">
-              Panamá Pacífico
-            </span>
-          </Reveal>
-          <Reveal asChild>
-            <img
-              src="/logo_cesine.jpg"
-              alt="Cesine"
-              className="h-8 w-auto grayscale transition-[filter] duration-300 hover:grayscale-0 md:h-9"
-            />
-          </Reveal>
-          <Reveal asChild>
-            <img
-              src="/logo_netbees.svg"
-              alt="Netbees"
-              className="h-9 w-auto grayscale transition-[filter] duration-300 hover:grayscale-0 md:h-10"
-            />
-          </Reveal>
-        </RevealGroup>
-      </div>
-
       {/* Método Netbees resumido: bullets con icono, sobre fondo claro. */}
-      <Reveal className="mt-16">
+      <Reveal className="mt-lg">
         <div className="rounded-card-lg border border-brand-line bg-brand-white px-7 py-10 shadow-card md:px-12 md:py-12">
           <p className="eyebrow text-brand-accent">{contexto.metodoRapido.eyebrow}</p>
           <h3 className="mt-3 font-display text-2xl font-bold tracking-tight text-brand-ink md:text-3xl">
@@ -129,6 +101,27 @@ export function Contexto() {
           </RevealGroup>
         </div>
       </Reveal>
+
+      {/* Logos de socios académicos/tecnológicos, discretos al pie de sección. */}
+      <RevealGroup
+        className="mt-lg flex flex-wrap items-center justify-center gap-x-12 gap-y-6"
+        stagger={0.08}
+      >
+        <Reveal asChild>
+          <img
+            src="/logo_cesine.jpg"
+            alt="Cesine"
+            className="h-8 w-auto grayscale transition-[filter] duration-300 hover:grayscale-0 md:h-9"
+          />
+        </Reveal>
+        <Reveal asChild>
+          <img
+            src="/logo_netbees.svg"
+            alt="Netbees"
+            className="h-9 w-auto grayscale transition-[filter] duration-300 hover:grayscale-0 md:h-10"
+          />
+        </Reveal>
+      </RevealGroup>
     </SectionShell>
   )
 }

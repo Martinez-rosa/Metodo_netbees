@@ -20,7 +20,12 @@ export function LogoMarquee({ logos, className }: LogoMarqueeProps) {
     return (
       <div className={cn('flex flex-wrap items-center justify-center gap-x-14 gap-y-8', className)}>
         {logos.map((c) => (
-          <img key={c.nombre} src={c.logo} alt={c.nombre} className="h-10 w-auto object-contain md:h-14" />
+          <img
+            key={c.nombre}
+            src={c.logo}
+            alt={c.nombre}
+            className={cn('w-auto object-contain', c.destacado ? 'h-16 md:h-24' : 'h-10 md:h-14')}
+          />
         ))}
       </div>
     )
@@ -45,7 +50,10 @@ export function LogoMarquee({ logos, className }: LogoMarqueeProps) {
               key={`${rep}-${c.nombre}-${i}`}
               src={c.logo}
               alt={c.nombre}
-              className="mr-14 h-10 w-auto flex-shrink-0 scale-95 object-contain opacity-60 grayscale brightness-90 transition duration-300 ease-expo hover:scale-100 hover:opacity-100 hover:grayscale-0 hover:brightness-100 md:mr-20 md:h-14"
+              className={cn(
+                'mr-14 w-auto flex-shrink-0 scale-95 object-contain opacity-60 grayscale brightness-90 transition duration-300 ease-expo hover:scale-100 hover:opacity-100 hover:grayscale-0 hover:brightness-100 md:mr-20',
+                c.destacado ? 'h-16 md:h-24' : 'h-10 md:h-14',
+              )}
             />
           )),
         )}

@@ -5,6 +5,7 @@ import { Reveal, RevealGroup } from '../components/Reveal'
 import { Card } from '../components/Card'
 import { PilarVideo } from '../components/PilarVideo'
 import { AnimatedBackground } from '../components/AnimatedBackground'
+import { cn } from '../lib/cn'
 
 /**
  * S2 · Los tres pilares. Grid 1/3 columnas: cada card con vídeo horizontal,
@@ -24,17 +25,36 @@ export function Pilares() {
         </Reveal>
       </div>
 
-      <RevealGroup className="mt-16 grid gap-5 md:grid-cols-3" stagger={0.1}>
+      <RevealGroup className="mt-lg grid gap-5 md:grid-cols-3" stagger={0.1}>
         {pilares.items.map((p) => (
           <Reveal key={p.index} asChild>
             <Card tilt className="flex h-full flex-col p-4">
               {/* Vídeo horizontal con máscara suave */}
-              <PilarVideo
-                src={p.video.src}
-                poster={p.video.poster}
-                alt={p.video.alt}
-                className="rounded-[14px]"
-              />
+              <div className="relative">
+                <PilarVideo
+                  src={p.video.src}
+                  poster={p.video.poster}
+                  alt={p.video.alt}
+                  className="rounded-[14px]"
+                />
+                {/* Sello del logo del socio, flotando sobre la esquina del vídeo */}
+                {p.logo && (
+                  <div
+                    className={cn(
+                      'absolute bottom-3 right-3 z-10 flex h-16 w-16 items-center justify-center overflow-hidden rounded-full border-2 p-1 shadow-pill',
+                      p.logoTone === 'red'
+                        ? 'border-white bg-red-700'
+                        : 'border-brand-line bg-brand-white/90 backdrop-blur-xl',
+                    )}
+                  >
+                    <img
+                      src={p.logo}
+                      alt={`Logo ${p.nombre}`}
+                      className="h-full w-full rounded-full object-contain"
+                    />
+                  </div>
+                )}
+              </div>
               <div className="flex flex-1 flex-col p-4 pt-6">
                 <div className="flex items-center justify-between">
                   <span className="font-display text-4xl font-bold tabular-nums text-brand-accent">
@@ -44,7 +64,9 @@ export function Pilares() {
                     {p.rol}
                   </span>
                 </div>
-                <h3 className="mt-6 font-display text-3xl font-bold tracking-tight">{p.nombre}</h3>
+                <h3 className="mt-6 text-balance font-display text-3xl font-bold leading-tight tracking-tight md:text-2xl lg:text-[26px]">
+                  {p.nombre}
+                </h3>
                 <p className="mt-3 text-body-lg text-brand-slate">{p.descripcion}</p>
 
                 {/* Burbujas de instituciones (p. ej. universidades/centros académicos) */}

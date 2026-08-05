@@ -9,14 +9,14 @@ import { LogoMarquee } from '../components/LogoMarquee'
  */
 export function Colaboradores() {
   return (
-    <SectionShell id="colaboradores" marker={colaboradores.eyebrow} className="py-20 md:py-28">
+    <SectionShell id="colaboradores" marker={colaboradores.eyebrow}>
       <div className="max-w-2xl">
         <Reveal>
           <p className="text-body-lg text-brand-slate">{colaboradores.bajada}</p>
         </Reveal>
       </div>
 
-      <Reveal delay={0.1} className="relative left-1/2 right-1/2 -mx-[50vw] mt-12 w-screen md:mt-16">
+      <Reveal delay={0.1} className="relative left-1/2 right-1/2 -mx-[50vw] mt-lg w-screen">
         <LogoMarquee logos={colaboradores.items} />
       </Reveal>
     </SectionShell>

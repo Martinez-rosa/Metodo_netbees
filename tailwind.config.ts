@@ -68,9 +68,16 @@ const config: Config = {
         pill: '0 10px 40px -12px rgba(11, 11, 16, 0.18)',
       },
       spacing: {
-        // Ritmo vertical entre secciones.
-        section: 'clamp(6rem, 12vw, 11rem)',
+        // Ritmo vertical entre secciones y bloques — mapea 1:1 a las
+        // variables CSS de src/index.css (única fuente de verdad).
+        section: 'var(--space-section)',
         gutter: 'clamp(1.25rem, 5vw, 5rem)',
+        '2xs': 'var(--space-2xs)',
+        xs: 'var(--space-xs)',
+        sm: 'var(--space-sm)',
+        md: 'var(--space-md)',
+        lg: 'var(--space-lg)',
+        xl: 'var(--space-xl)',
       },
       maxWidth: {
         shell: '1280px',

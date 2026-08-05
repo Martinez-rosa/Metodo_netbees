@@ -19,7 +19,14 @@
       "Bash(node \"C:\\\\Users\\\\MAURAM~1\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-MauraMart-nez-Documents-Panam--Pac-fico--Cesine\\\\0e8a9496-50f1-42a5-aff5-b03e9de554f3\\\\scratchpad\\\\decode.js\" mcp-Claude_Browser-javascript_tool-1784710782502.txt final-row-preview.png)",
       "Bash(powershell -Command \"Get-NetTCPConnection -LocalPort 5173 -ErrorAction SilentlyContinue | Select-Object OwningProcess\")",
       "PowerShell(Stop-Process -Id 15716 -Force -Confirm:$false)",
-      "PowerShell(Get-NetTCPConnection -LocalPort 5173 -ErrorAction SilentlyContinue)"
+      "PowerShell(Get-NetTCPConnection -LocalPort 5173 -ErrorAction SilentlyContinue)",
+      "Bash(ffprobe -v error -select_streams v:0 -show_entries stream=width,height,duration,r_frame_rate -of default=noprint_wrappers=1 \"public/Laboratorio_ia.mp4\")",
+      "Bash(ffmpeg -y -ss 00:00:03 -i \"public/Laboratorio_ia.mp4\" -frames:v 1 -vf \"scale=1280:-1\" -q:v 3 \"public/video/laboratorio-ia-poster.jpg\")",
+      "Bash(ffprobe -v trace -show_format \"public/Laboratorio_ia.mp4\")",
+      "Bash(curl -sI http://localhost:5173/video/video_escuelaAltamira.mp4)",
+      "Bash(powershell -NoProfile -Command \"Get-Process -Id 29536 -ErrorAction SilentlyContinue | Stop-Process -Force\")",
+      "Bash(powershell -NoProfile -Command \"Get-Process -Id 13124 -ErrorAction SilentlyContinue | Stop-Process -Force\")",
+      "Bash(powershell -NoProfile -Command \"Get-Process -Id 1772 -ErrorAction SilentlyContinue | Stop-Process -Force\")"
     ]
   }
 }
