@@ -498,6 +498,9 @@ export const recursos = {
         'Para creación, prueba y validación de soluciones aplicadas a retos empresariales reales implementados por empresas de Panamá Pacífico.',
     },
     {
+      titulo: 'Los participantes formarán parte de una bolsa de empleo de AEDIPE para búsqueda de oprtunidades en Europa.',
+    },
+    {
       titulo: 'Metodología "Learning by doing"',
       descripcion: 'Ya implementada en Europa.',
     },
@@ -514,6 +517,7 @@ export const recursos = {
     {
       titulo: 'Obtendrás tu perfil y CV Europass oficial, para tu laboral en Europa.',
     },
+    
   ] satisfies Entregable[],
 }
 
