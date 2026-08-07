@@ -105,7 +105,7 @@ export const nav = {
 // ————————————————————————————————————————————————
 
 export const hero = {
-  eyebrow: 'PANAMÁ PACÍFICO · Cesine · NETBEES',
+  eyebrow: 'PANAMÁ PACÍFICO · ESCUELA DE IA ALTAMIRA · NETBEES',
   titulo: 'Diseñamos el *futuro*',
   // El subtítulo cambia con el scroll: al inicio "misión", al final del pin
   // "arquitectura" — la promesa "3 pilares" se afirma literalmente.
@@ -513,6 +513,8 @@ export const recursos = {
     },
     {
       titulo: 'Creación de microcredenciales para los alumnos',
+    },{
+      titulo: 'Acceso a una bolsa de empleo por parte de AEDIPE CANTABRIA',
     },
     {
       titulo: 'Obtendrás tu perfil y CV Europass oficial, para tu laboral en Europa.',
