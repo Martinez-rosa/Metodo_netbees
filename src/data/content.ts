@@ -513,8 +513,6 @@ export const recursos = {
     },
     {
       titulo: 'Creación de microcredenciales para los alumnos',
-    },{
-      titulo: 'Acceso a una bolsa de empleo por parte de AEDIPE CANTABRIA',
     },
     {
       titulo: 'Obtendrás tu perfil y CV Europass oficial, para tu laboral en Europa.',
