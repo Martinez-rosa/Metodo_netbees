@@ -505,7 +505,7 @@ export const recursos = {
       descripcion: 'Ya implementada en Europa.',
     },
     {
-      titulo: 'Certificado Fundación gestora de la Escuela Universitaria  Altamira y la Altamira IA Academy adscrita a la uce ',
+      titulo: 'Certificado Fundación gestora de la Escuela Universitaria  Altamira y la Altamira IA Academy adscrita a la UC ',
     },
     
     {
