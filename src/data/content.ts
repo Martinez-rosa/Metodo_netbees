@@ -214,7 +214,7 @@ export const pilares = {
         { nombre: 'UTP', descripcion: 'Universidad Tecnológica de Panamá' },
         { nombre: 'Altamira', descripcion: 'Fundación gestora de la Escuela Universitaria  Altamira y la Altamira IA Academy adscrita a la UC' },
       ] satisfies SocioAcademico[],
-      logo: '/logo_altamira.svg',
+      logo: '/logo_altamiraIAAcademy.jpeg',
       logoTone: 'red',
       video: {
         src: '/video/video_escuelaAltamira.mp4',
@@ -457,7 +457,7 @@ export const talentLab = {
     {
       titulo: 'Maflow Pulse',
       descripcion: 'Cronómetro de procesos industriales.',
-      logo: '/logo_pulse.svg',
+      logo: '/logo_optime.jpeg',
     },
   ] satisfies ModuloTalent[],
 }

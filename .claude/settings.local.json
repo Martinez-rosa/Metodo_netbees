@@ -26,7 +26,10 @@
       "Bash(curl -sI http://localhost:5173/video/video_escuelaAltamira.mp4)",
       "Bash(powershell -NoProfile -Command \"Get-Process -Id 29536 -ErrorAction SilentlyContinue | Stop-Process -Force\")",
       "Bash(powershell -NoProfile -Command \"Get-Process -Id 13124 -ErrorAction SilentlyContinue | Stop-Process -Force\")",
-      "Bash(powershell -NoProfile -Command \"Get-Process -Id 1772 -ErrorAction SilentlyContinue | Stop-Process -Force\")"
+      "Bash(powershell -NoProfile -Command \"Get-Process -Id 1772 -ErrorAction SilentlyContinue | Stop-Process -Force\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:5173/)",
+      "Bash(curl -s http://localhost:5173/)",
+      "Bash(curl -s \"http://localhost:5175/src/data/content.ts\")"
     ]
   }
 }

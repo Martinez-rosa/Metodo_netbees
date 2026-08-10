@@ -24,7 +24,10 @@ export function LogoMarquee({ logos, className }: LogoMarqueeProps) {
             key={c.nombre}
             src={c.logo}
             alt={c.nombre}
-            className={cn('w-auto object-contain', c.destacado ? 'h-16 md:h-24' : 'h-10 md:h-14')}
+            className={cn(
+              'w-auto object-contain',
+              c.destacado ? 'h-[102px] md:h-[154px]' : 'h-16 md:h-[90px]',
+            )}
           />
         ))}
       </div>
@@ -52,7 +55,7 @@ export function LogoMarquee({ logos, className }: LogoMarqueeProps) {
               alt={c.nombre}
               className={cn(
                 'mr-14 w-auto flex-shrink-0 scale-95 object-contain opacity-60 grayscale brightness-90 transition duration-300 ease-expo hover:scale-100 hover:opacity-100 hover:grayscale-0 hover:brightness-100 md:mr-20',
-                c.destacado ? 'h-16 md:h-24' : 'h-10 md:h-14',
+                c.destacado ? 'h-[102px] md:h-[154px]' : 'h-16 md:h-[90px]',
               )}
             />
           )),
