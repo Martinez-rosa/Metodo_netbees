@@ -35,7 +35,7 @@ export function Recursos() {
             </div>
             <p className="eyebrow mt-3 text-brand-accent">{recursos.cifraLabel}</p>
             <div className="mt-8 flex items-center gap-3 border-t border-brand-line pt-6">
-              <span className="font-display text-4xl font-bold text-brand-ink">10</span>
+              <span className="font-display text-4xl font-bold text-brand-ink">5</span>
               <span className="font-label text-sm font-semibold uppercase tracking-label text-brand-slate">
                 {recursos.cifraSub}
               </span>

@@ -105,7 +105,7 @@ export const nav = {
 // ————————————————————————————————————————————————
 
 export const hero = {
-  eyebrow: 'PANAMÁ PACÍFICO · ESCUELA DE IA ALTAMIRA · NETBEES',
+  eyebrow: 'PANAMÁ PACÍFICO · ALTAMIRA IA ACADEMY · NETBEES',
   titulo: 'Diseñamos el *futuro*',
   // El subtítulo cambia con el scroll: al inicio "misión", al final del pin
   // "arquitectura" — la promesa "3 pilares" se afirma literalmente.
@@ -212,7 +212,7 @@ export const pilares = {
       descripcion: 'Motor de talento de élite y validación académica.',
       socios: [
         { nombre: 'UTP', descripcion: 'Universidad Tecnológica de Panamá' },
-        { nombre: 'Altamira', descripcion: 'Fundación gestora de la Escuela Universitaria  Altamira y la Altamira IA Academy adscrita a la uce' },
+        { nombre: 'Altamira', descripcion: 'Fundación gestora de la Escuela Universitaria  Altamira y la Altamira IA Academy adscrita a la UC' },
       ] satisfies SocioAcademico[],
       logo: '/logo_altamira.svg',
       logoTone: 'red',
@@ -432,9 +432,9 @@ export const programa = {
 
 export const talentLab = {
   eyebrow: 'TALENT LAB · INNOVACIÓN ABIERTA',
-  cifra: '700',
+  cifra: '400',
   unidad: 'm²',
-  titulo: 'dedicados a la formación de *élite* tecnológica',
+  titulo: 'dedicados a aulas de formación de *élite* tecnológica',
   retosEyebrow: 'RETOS TECNOLÓGICOS',
   retosSubtitulo: 'A continuación, los retos tecnológicos que hemos logrado resolver.',
   modulos: [
