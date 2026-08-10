@@ -434,7 +434,7 @@ export const talentLab = {
   eyebrow: 'TALENT LAB · INNOVACIÓN ABIERTA',
   cifra: '400',
   unidad: 'm²',
-  titulo: 'dedicados a aulas de formación de *élite* tecnológica',
+  titulo: 'dedicados a aulas de formación de *élite* tecnológica, y más de *8000 m²* de laboratorio industrial',
   retosEyebrow: 'RETOS TECNOLÓGICOS',
   retosSubtitulo: 'A continuación, los retos tecnológicos que hemos logrado resolver.',
   modulos: [
@@ -483,7 +483,7 @@ export const recursos = {
   cifra: '1.711,66',
   unidad: '$',
   cifraLabel: 'POR BECA',
-  cifraSub: '5 BECAS',
+  cifraSub: 'BECAS',
   bloqueEconomicoTitulo: 'Inversión por beca',
   entregablesTitulo: 'Qué se entrega',
   entregables: [
