@@ -455,7 +455,7 @@ export const talentLab = {
       logo: '/logo_opc.svg',
     },
     {
-      titulo: 'Maflow Pulse',
+      titulo: 'Opttime',
       descripcion: 'Cronómetro de procesos industriales.',
       logo: '/logo_optime.jpeg',
     },
